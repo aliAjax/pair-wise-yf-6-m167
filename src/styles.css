@@ -56,7 +56,11 @@ h1 {
 .stats {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+}
+
+.stat.wide {
+  grid-column: 1 / -1;
 }
 
 .stat,
@@ -83,11 +87,281 @@ h1 {
 }
 
 .layout {
+  align-items: start;
   display: grid;
   gap: 18px;
   grid-template-columns: 340px 1fr;
   margin: 0 auto;
   max-width: 1240px;
+}
+
+.side {
+  display: grid;
+  gap: 18px;
+  position: sticky;
+  top: 18px;
+}
+
+.main-col {
+  display: grid;
+  gap: 14px;
+}
+
+.subtitle {
+  color: #687165;
+  font-size: 0.9rem;
+  margin: 8px 0 0;
+}
+
+.panel-note {
+  color: #7a8378;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: -6px 0 12px;
+}
+
+.panel-head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.panel-head .panel-note {
+  flex: 1 1 260px;
+  margin: 0 0 10px;
+}
+
+.banner {
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0 auto 16px;
+  max-width: 1240px;
+  padding: 12px 14px;
+  white-space: pre-line;
+}
+
+.banner.error {
+  background: #f7e2db;
+  border: 1px solid #d99a86;
+  color: #7c3324;
+}
+
+.banner.ok {
+  background: #e2eedf;
+  border: 1px solid #93b58c;
+  color: #2f552c;
+}
+
+.batch-panel {
+  margin-bottom: 2px;
+}
+
+#batch-rows {
+  display: grid;
+  gap: 8px;
+}
+
+.batch-row {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(150px, 1.3fr) minmax(130px, 1fr) minmax(120px, 1fr) minmax(110px, 1fr) 40px;
+}
+
+.icon-btn {
+  background: #e9eee6;
+  border-radius: 6px;
+  color: #8a5041;
+  font-size: 1.1rem;
+  font-weight: 800;
+  min-height: 42px;
+}
+
+.icon-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.batch-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.primary.small {
+  font-size: 0.84rem;
+  min-height: 36px;
+  padding: 7px 12px;
+}
+
+.ghost.danger {
+  background: #f3e2dc;
+  color: #8a4032;
+}
+
+.agenda,
+.cancelled-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agenda {
+  display: grid;
+  gap: 10px;
+}
+
+.agenda-date {
+  color: #526056;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.agenda-item {
+  align-items: center;
+  border-radius: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  gap: 6px;
+  margin-bottom: 5px;
+  padding: 7px 9px;
+}
+
+.agenda-item.booked {
+  background: #f3ead7;
+}
+
+.agenda-item.arrived {
+  background: #dde8f2;
+}
+
+.agenda-slot {
+  font-weight: 800;
+}
+
+.muted {
+  color: #747d72;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.empty-inline {
+  color: #8a9288;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.mini-status {
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  margin-left: auto;
+  padding: 3px 8px;
+}
+
+.mini-status.booked {
+  background: #e3b96f;
+  color: #5f4316;
+}
+
+.mini-status.arrived {
+  background: #b7cfe6;
+  color: #274a68;
+}
+
+.mini-status.cancelled {
+  background: #e2cfc9;
+  color: #7a3a2c;
+}
+
+.mini-status.completed {
+  background: #cfe0cb;
+  color: #355e32;
+}
+
+.booking {
+  background: #f6f4ec;
+  border: 1px solid #e0dccb;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+}
+
+.booking.arrived {
+  background: #eef4fa;
+  border-color: #c8d8e8;
+}
+
+.booking-head {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.booking-head .mini-status {
+  margin-left: 0;
+}
+
+.booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inline-form {
+  align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.inline-form label {
+  flex: 1 1 160px;
+}
+
+.inline-form .grow {
+  flex: 2 1 220px;
+}
+
+.rule-note {
+  color: #8a7a4b;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.cancelled-panel h2 {
+  font-size: 1rem;
+  margin: 0 0 12px;
+}
+
+.cancelled-list {
+  display: grid;
+  gap: 8px;
+}
+
+.cancelled-list li {
+  align-items: center;
+  border-bottom: 1px dashed #e0ddd2;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  gap: 8px;
+  padding-bottom: 8px;
+}
+
+.cancel-reason {
+  color: #8a4032;
+  flex-basis: 100%;
 }
 
 .panel {
@@ -281,6 +555,14 @@ textarea {
     display: grid;
     grid-template-columns: 1fr;
   }
+
+  .side {
+    position: static;
+  }
+
+  .batch-row {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 620px) {
@@ -289,7 +571,7 @@ textarea {
   }
 
   .stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .repair {
@@ -298,5 +580,9 @@ textarea {
 
   .content {
     padding: 14px;
+  }
+
+  .batch-row {
+    grid-template-columns: 1fr;
   }
 }
