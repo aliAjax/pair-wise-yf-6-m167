@@ -56,7 +56,7 @@ h1 {
 .stats {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-columns: repeat(4, minmax(110px, 1fr));
 }
 
 .stat,
@@ -298,5 +298,191 @@ textarea {
 
   .content {
     padding: 14px;
+  }
+}
+
+/* ---- 上门排期台 ---- */
+.subtitle {
+  color: #6e756d;
+  font-size: 0.9rem;
+  margin: 10px 0 0;
+}
+
+.main-col {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.hint {
+  color: #7a8278;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.desk {
+  padding: 16px 18px;
+}
+
+.desk-head {
+  margin-bottom: 12px;
+}
+
+.desk-head h2 {
+  margin-bottom: 4px;
+}
+
+.desk-rows {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.draft-row {
+  background: #f6f8f3;
+  border: 1px solid #dde1d9;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.draft-row.has-error {
+  border-color: #c75a3f;
+  background: #fbf0ec;
+}
+
+.draft-meta {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.draft-meta strong {
+  font-size: 0.95rem;
+}
+
+.draft-meta span {
+  color: #5f685d;
+  font-size: 0.85rem;
+}
+
+.draft-fields {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.draft-fields label {
+  font-size: 0.76rem;
+  gap: 4px;
+}
+
+.desk-foot {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.banner {
+  border-radius: 8px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+}
+
+.banner.error {
+  background: #f7e3dc;
+  border: 1px solid #d68a72;
+  color: #7c3320;
+}
+
+.notice {
+  background: #e6f0e1;
+  border: 1px solid #9fbf92;
+  border-radius: 8px;
+  color: #345e2b;
+  font-size: 0.85rem;
+  padding: 10px 12px;
+}
+
+.row-error {
+  color: #a33d22;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 6px 0 0;
+}
+
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.schedule-chip {
+  background: #eef1eb;
+}
+
+.booked-chip {
+  background: #f2e7d4;
+  color: #7a541d;
+}
+
+.doing-chip {
+  background: #dde8f2;
+  color: #315674;
+}
+
+.cancel-chip {
+  background: #f7e3dc;
+  color: #7c3320;
+}
+
+.inline-form {
+  background: #f6f8f3;
+  border: 1px solid #dde1d9;
+  border-radius: 8px;
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 12px;
+}
+
+.inline-form .draft-fields {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.small {
+  min-height: 36px;
+  padding: 7px 12px;
+}
+
+.danger {
+  background: #f2ded7;
+  border-radius: 6px;
+  color: #96361e;
+  font-weight: 800;
+}
+
+button.danger.ghost {
+  background: #f2ded7;
+}
+
+.status.booked {
+  background: #f2e7d4;
+  color: #7a541d;
+}
+
+@media (max-width: 620px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .draft-fields,
+  .inline-form .draft-fields {
+    grid-template-columns: 1fr;
   }
 }
